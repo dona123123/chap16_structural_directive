@@ -26,6 +26,10 @@ export class ProductComponent {
         this.model.saveProduct(p);
     }
 
+    deleteProduct( key: number){
+        this.model.deleteProduct(key);
+    }
+
     formSubmitted: boolean = false;
 
     submitForm(form: NgForm) {
@@ -37,4 +41,5 @@ export class ProductComponent {
             this.formSubmitted = false;
         }
     }
+    showTable: boolean=true;
 }
