@@ -28,6 +28,7 @@ export class PaIteratorDirective{
     ngDoCheck() {
         let changes = this.differ.diff(this.dataSource);
         if (changes != null) {
+            console.log("L31 iterator.dir.ts called")
             changes.forEachAddedItem(addition => {
                 let context = new PaIteratorContext(addition.item,
                     addition.currentIndex, changes.length);
